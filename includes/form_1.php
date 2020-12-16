@@ -12,8 +12,8 @@
 	$to = 'receiver@yoursite.com'; // Email submissions are sent to this email
 
 	// Create email	
-	$email_subject = "Message from your website";
-	$email_body = "You have received a new message. \n\n".
+	$email_subject = "Message de votre site web";
+	$email_body = "Vous avez reçu un nouveau mail. \n\n".
 				"Name: $name \nEmail: $email \nInput_504: $input_504 \nMessage: $message \n";
 	$headers = "MIME-Version: 1.0\r\nContent-type: text/plain; charset=UTF-8\r\n";	
 	$headers .= "From: contact@yoursite.com\n";
