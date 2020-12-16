@@ -58,11 +58,11 @@
 				<article class="container bloc-lg">
 					<div class="row">
 						<div class="col-sm-12">
-							<h1 class="text-center hero-bloc-text tc-white">
+							<h1 class="text-center hero-bloc-text tc-white contact">
 								Parlons web design !
 							</h1>
 
-							<p class="text-center mg-lg tc-white tight-width-whitespace">
+							<p class="text-center mg-lg tc-white tight-width-whitespace contact">
 								Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
 								Parlez-nous de votre projet en complétant le formulaire ci-dessous.
 							</p>
@@ -76,43 +76,32 @@
 			<section class="bloc bgc-white l-bloc" id="bloc-7">
 				<article class="container bloc-lg">
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-6 formulaire">
 							<form action="./includes/form_1.php" method="post" id="form_1" novalidate success-msg="Votre message a bien été envoyé" fail-msg="Oups, il semblerait que notre serveur de mail ne répond pas. Désolé pour l'inconvénient.">
 								<!-- !!! demander à Jean-François si c'est ok !!! -->
 								<div class="form-group">
 									<label for="name">Nom</label>
-									<input type="text" id="name" name="user_name" class="form-control" placeholder="Indiquez votre nom/prénom ou celui de votre entreprise">
+									<input type="text" id="name" name="user_name" class="form-control" placeholder="Indiquez votre nom/prénom ou celui de votre entreprise" required>
 								</div>
 
 								<div>
 									<label for="email">Adresse email</label>
-									<input type="email" id="email" name="user_mail" class="form-control" placeholder="Indiquez votre mail de contact" required>
+									<input id="email" type="email" name="user_mail" class="form-control" placeholder="Indiquez votre mail de contact" required>
 								</div>
 
 								<div class="form-group">
 									<label for="input_504">Comment nous avez-vous connus ?</label>
-									<textarea id="input_504" name="knowing" class="form-control" type="text" placeholder="Ex : Google, bouche à oreille, etc."></textarea>
+									<textarea id="input_504" name="knowing" class="form-control" type="text" placeholder="Ex : Google, bouche à oreille, etc." required></textarea>
 								</div>
 
 								<div class="form-group">
 									<label for="message">Brief de votre projet (ajoutez autant de détails que nécessaire)</label>
-									<textarea name="project" id="message" cols="59" rows="4" placeholder="Indiquez votre projet" required></textarea>
+									<textarea name="project" id="message" cols="59" rows="4" class="form-control" placeholder="Indiquez votre projet" required></textarea>
 								</div>
-
-								<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit">
-									Envoyer
+								
+								<button type="submit" class="text-center btn btn-lg btn-clean btn-rd cta-hero btn-atomic-tangerine formulaire-button" id="cta-hero">Envoyer</a>
 								</button>
 							</form>
-						</div>
-
-						<div class="col-sm-6">
-							<p>
-								contact@lachouetteagence.com
-								<br>
-								2 place Sathonay 69001 Lyon
-								<br>
-								Ouvert de 9h à 18h, du lundi au vendredi
-							</p>
 						</div>
 					</div>
 				</article>
@@ -120,7 +109,7 @@
 			<!-- bloc-7 END -->
 
 			<!-- ScrollToTop Button -->
-			<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')">Text<span class="fa fa-chevron-up">Text</span></a>
+			<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>
 			<!-- Attention, le ScrollToTop n'est pas visible sur la page ! Il faudrait modifier sa couleur pour qu'elle se détache du background. -->
 			<!-- ScrollToTop Button END-->
 
@@ -129,8 +118,14 @@
 				<div class="container bloc-sm">
 					<div class="row">
 						<div class="col-sm-12">
-							<p class="text-center white">La chouette agence - Agence web basée à Lyon</p>
-
+							<address>
+								<p class="text-center white">
+									La chouette agence - Agence web basée à Lyon <br>
+									2 place Sathonay, 69001 Lyon <br>
+									Ouvert de 9h à 18h, du lundi au vendredi
+								</p>
+							</address>
+							
 							<div class="row row-no-gutters social">
 								<div class="col-sm-3">
 									<div class="text-center">
