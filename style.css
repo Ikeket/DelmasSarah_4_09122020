@@ -510,13 +510,21 @@ li {
     max-width: 1000px;
 }
 
+.text-center {
+    display: flex;
+    justify-content: center;
+}
 
 /*------------------------------*/
 /*             typo             */
 /*------------------------------*/
 
-body {
+body,
+input,
+label, 
+textarea {
     font-family: 'Helvetica', sans-serif;
+    font-size: 1em;
 }
 
 h1 {
@@ -551,10 +559,6 @@ p.contact {
     color: white;
 }
 
-.text-center {
-    display: flex;
-    justify-content: center;
-}
 
 
 /*------------------------------*/
@@ -573,10 +577,14 @@ p.contact {
 
 .bg-banniere {
     background-image: url("./assets/background/la-chouette-agence-banniere.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bg-presentation {
     background-image: url("./assets/background/image-de-presentation.bmp");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -652,16 +660,21 @@ header {
 }
 
 
-/* main */
-
-.tight-width-whitespace {
-    max-width: 800px;
-    margin: auto;
-}
-
+/*------------------------------*/
+/*                              */
+/*             main             */
+/*                              */
+/*------------------------------*/
 
 
 /* homepage */
+.presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .citation {
     margin-left: auto;
     margin-right: auto;
@@ -674,8 +687,11 @@ header {
     font-style: italic;
 }
 
-
 /* talking */
+.talking {
+    height: 400px;
+}
+
 /* formulaire */
 .formulaire,
 .formulaire-button {
@@ -686,13 +702,52 @@ header {
     margin-right: auto ;
 }
 
+.formulaire label {
+    font-weight: bold;
+}
+.formulaire input,
+.formulaire textarea {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+input:required,
+textarea:required {
+    background-color: rgba(0, 0, 1, .05);
+}
 
 /*------------------------------*/
 /*                              */
 /*            footer            */
 /*                              */
 /*------------------------------*/
+footer {
+    padding: 25px;
+}
 
+.social {
+    margin: 15px;
+}
 footer,
 .social {
     display: flex;
