@@ -1,0 +1,35 @@
+/* header  */
+
+@media screen and (max-width: 900px) {
+    #bloc-0 {
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+/* main */
+
+.services__list-icon {
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+
+article img {
+    max-width: 250px;
+}
+.portfolio-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+}
+

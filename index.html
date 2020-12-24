@@ -7,6 +7,7 @@
 
 		<!-- <link rel="stylesheet" type="text/css" href="./css/bootstrap.css"> -->
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="media-style.css">
 		<link rel="stylesheet" type="text/css" href="./css/et-line.css">
 
 		<script src="./js/jquery-2.1.0.js"></script>
@@ -72,7 +73,7 @@
 				<div class="services bloc-md">
 					<article class="row">
 						<div class="col-sm-12 text-center">
-							<p>La chouette agence est une agence de web design qui aide les entreprises à devenir attractives et visibles sur Internet.</p>
+							<p class="services-plot">La chouette agence est une agence de web design qui aide les entreprises à devenir attractives et visibles sur Internet.</p>
 						</div>
 					</article>
 					<article class="row voffset-lg med-width-whitespace services__list">
@@ -106,8 +107,9 @@
 					<article class="row voffset-lg voffset services__citation">
 						<figure>
 							<blockquote cite="#" class="citation">
-								<p class="citation__text">La chouette agence est une excellente agence web ! Les web designers ont réussi à capturer l'essence de notre entreprise et à l'intégrer à notre site. Cela nous a aidé à doubler nos ventes en ligne à Lyon.</p>
+								<p class="citation__text">La chouette agence est une excellente agence web&#8239;! <br>Les web designers ont réussi à capturer l'essence de notre entreprise et à l'intégrer à notre site. Cela nous a aidé à doubler nos ventes en ligne à Lyon.</p>
 							</blockquote>
+							<br>
 							<figcaption class="citation__auteur">— Maxime Guibard, <cite>PDG de À vos fourchettes</cite></figcaption>
 						</figure>
 					</article>
@@ -144,8 +146,8 @@
 
 					<article class="portfolio__list">
 						<div class="row tight-width-whitespace portfolio-row">
-							<div class="col-sm-6">
-								<a href="#" data-lightbox="./assets/portfolio/1.jpg" data-gallery-id="gallery-1" data-caption="Refonte d'un site web pour un journal local" data-frame="snapshot-lb">
+							<div class="col-sm-6 portfolio-row-box">
+								<a href="#">
 									<img src="./assets/portfolio/1.jpg" alt="paris web design logo agence web meilleure agence et refonte site web journal" class="img-responsive portfolio-thumb" />
 								</a>
 								<h2 class="mg-md text-center">
@@ -155,8 +157,8 @@
 									Nous avons créé une nouvelle identité visuelle pour un journal lyonnais.
 								</p>
 							</div>
-							<div class="col-sm-6">
-								<a href="#" data-lightbox="./assets/portfolio/2.jpg" data-gallery-id="gallery-1" data-caption="Création d'un site web pour photographes" data-frame="snapshot-lb">
+							<div class="col-sm-6 portfolio-row-box">
+								<a href="#">
 									<img src="./assets/portfolio/2.jpg" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour photographes" />
 								</a>
 								<h2 class="mg-md text-center">
@@ -169,7 +171,7 @@
 						</div>
 	
 						<div class="row tight-width-whitespace portfolio-row">
-							<div class="col-sm-6">
+							<div class="col-sm-6 portfolio-row-box">
 								<a href="#" data-lightbox="./assets/portfolio/3.bmp" data-gallery-id="gallery-1" data-caption="Création d'un site internet pour un voyageur" data-frame="snapshot-lb">
 									<img src="./assets/portfolio/3.bmp" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour voyageur"/>
 								</a>
@@ -180,7 +182,7 @@
 									Nous avons élaboré un site internet et des illustrations pour sublimer les vidéos et les articles de ce voyageur.
 								</p>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-sm-6 portfolio-row-box">
 								<a href="./contact.html" data-lightbox="./assets/portfolio/4.bmp" data-gallery-id="gallery-1" data-caption="Conception d'un site pour une agence de mariage" data-frame="snapshot-lb">
 									<img src="./assets/portfolio/4.bmp" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour agence de mariage" />
 								</a>
@@ -203,20 +205,24 @@
 			<section class="bloc bgc-dark-slate-blue bg-banniere d-bloc bloc-bg-texture texture-paper" id="bloc-5-cta">
 				<article class="container bloc-lg">
 					<div class="row">
-						<h3 class="mg-md text-center white">
+						<p class="mg-md text-center white contact-us">
 							Prêt pour redonner vie à votre projet ?<br>Contactez notre équipe !
-						</h2>
+						</p>
 						<div class="col-sm-12 text-center">
-							<a href="page2.html" class="btn btn-atomic-tangerine btn-clean btn-rd btn-lg cta-hero">Contact</a>
+							<a href="contact.html" class="btn btn-atomic-tangerine btn-clean btn-rd btn-lg cta-hero">Contact</a>
 						</div>
 					</div>
 				</article>
 			</section>
 			<!-- bloc-5-cta END -->
 
+						<!-- ScrollToTop Button -->
+						<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>
+						<!-- ScrollToTop Button END-->
+
 			<!-- Footer - bloc-8 -->
 			<footer class="bloc bgc-atomic-tangerine d-bloc" id="bloc-8">
-				<div class="container bloc-sm">
+				<div class="bloc-sm">
 					<div class="row">
 						<div class="col-sm-12">
 							<address>
