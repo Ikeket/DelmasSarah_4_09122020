@@ -9,11 +9,12 @@
     margin: 0;
     padding: 0;
     padding-inline-start: unset;
-
-}
-
-body {
-    overflow-x: hidden;
+    /*------------------------------
+    Permet de remettre à zéro toutes les propriétés afin de pouvoir agir entièrement notre code
+    Pourquoi est-ce utile ? Les navigateurs appliquent des valeurs par défaut à certaines propriétés
+    ex : h1, h2, h3, etc.
+    Ces valeurs ne sont pas communes à tous les navigateurs.
+    ------------------------------*/
 }
 
 a,
@@ -29,10 +30,10 @@ li {
 
 .container {
     box-sizing: border-box;
+    /* Rajout de la propriété box-sizing afin de faciliter l'utiliser des paddings tout en gardant le maximum de la longueur souhaité pour le container. */
     padding: 50px 20px;
     max-width: 1024px;
     margin: 0 auto;
-    border: dotted 5px red;    /* à supprimer */
 }
 
 .text-center {
@@ -108,6 +109,7 @@ p {
 /*------------------------------*/
 /*            colors            */
 /*------------------------------*/
+
 a, a:hover, a:active {
     color: #000000;
 }
@@ -128,7 +130,6 @@ p {
 p.contact {
     color: white;
 }
-
 
 .bgc-atomic-tangerine {
     background-color: #F3976C;
@@ -243,6 +244,7 @@ p.contact {
 /*------------------------------*/
 /*             icon             */
 /*------------------------------*/
+
 .menu__icon {
     opacity: 0;
 }
@@ -251,12 +253,12 @@ p.contact {
 /*          navigation          */
 /*------------------------------*/
 
-.header__navbar {
+.header__nav {
     display: flex;
     flex-direction: row;
 }
 
-.header__navbar li a {
+.header__nav a {
     border-radius: 25px;
     color: #000000;
     font-weight: bold;
@@ -266,87 +268,11 @@ p.contact {
     transition: background-color 0.5s linear;
     transition: color 0.5s linear;
 }
-.header__nav ul li a:hover {
+.header__nav a:hover {
     color: #FFF;
     background-color:rgba(0, 0, 1, .25);
     border-radius: 25px;
 }
-
-@media screen and (max-width: 900px) {
-
-    .header__navigation {
-        flex-direction: column;
-        background-color: yellow;
-    }
-
-    .header__wrap {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .menu__icon {
-        align-items: center;
-        color: #7E7F80;
-        cursor: pointer;
-        display: flex;
-        font-size: 2.4em;
-        justify-content: center;
-        opacity: 1;
-        width: 60px;
-    }
-
-    .header__navbar {
-        opacity: 1;
-    }
-    
-}
-
-/*
-@media screen and (max-width: 900px) {
-    .header {
-        display: flex;
-        flex-direction: column;
-        height: 100px;
-    }
-
-    .header__wrap {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        width: 95%;
-    }
-
-    .header__nav {
-        align-items: flex-end;
-        display: flex;
-        flex-direction: column-reverse;
-        width: 100%;
-        background-color: red;
-        border: 1px solid black;
-    }
-
-    .header__navbar {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid black;
-    }
-
-    .header__nav ul li a {
-        border-radius: 0;
-        color: white;
-    }
-
-    .header__nav ul li a:hover {
-        border-radius: 0;
-        color: white;
-    }
-    
-
-    .menu__icon {
-        opacity: 1;
-    }
-} */
-
 
 /*------------------------------*/
 /*                              */
@@ -507,7 +433,7 @@ form {
     margin-left: auto;
     margin-right: auto ;
 }
- 
+
 .formulaire label {
     font-weight: bold;
 }
@@ -577,8 +503,6 @@ footer,
 
 @media screen and (max-width: 900px) {
 
-
-
     /* main */
 
     .services__list-icon {
@@ -603,5 +527,63 @@ footer,
         max-width: 80%;
     }
 
+
+    @media screen and (max-width: 900px) {
+
+        .header__navigation {
+            align-items: stretch;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 50px 0 0 0;
+            width: 100%;
+        }
+
+        .header__wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .menu__icon {
+            align-items: center;
+            color: #7E7F80;
+            cursor: pointer;
+            display: flex;
+            font-size: 2.4em;
+            justify-content: center;
+            opacity: 1;
+            width: 60px;
+        }
+    
+        .header__nav {
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #F6F6F6;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 1;
+            width: 100%;
+        }
+        .header__nav a {
+            border: 1px solid #b3b3b3;
+            border-radius: 0%;
+            transition: none;
+            margin: 0;
+        }
+        .header__nav a:hover,
+        .header__nav a:active {
+            border-radius: 0%;
+            color: #FFF;
+        }
+        
+
+        .menu__icon:active {
+            transition: background-color 1s linear;
+        }
+    }
 }
 
